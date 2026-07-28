@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beginner-friendly explanation of how the Internet works, covering IP addresses, DNS, servers, and data packets.">
+    <title>CS Concept Explainer: How the Internet Works</title>
+</head>
+<body>
+
+    <header>
+        <h1>How the Internet Works</h1>
+        <p>A beginner-friendly guide to understanding the backbone of modern communication.</p>
+    </header>
+
+    <main>
+
+        <section id="what-is-the-internet">
+            <h2>What Is the Internet?</h2>
+            <p>
+                The Internet is a massive global network of interconnected computers that communicate with each other using a shared set of rules called <strong>protocols</strong>. It is not a single machine or a single cable &mdash; it is millions of devices (computers, phones, servers, routers) linked together across the world.
+            </p>
+            <p>
+                When you visit a website, send a message, or stream a video, you are using the Internet to exchange data with another computer, often thousands of miles away, in a fraction of a second.
+            </p>
+        </section>
+
+        <section id="real-world-analogy">
+            <h2>Real-World Analogy: The Postal System</h2>
+            <p>
+                Think of the Internet like a global postal system. When you send a letter, you write a message, put it in an envelope with a destination address, and hand it to the post office. The post office routes your letter through sorting facilities and local delivery offices until it reaches the recipient.
+            </p>
+            <p>
+                The Internet works the same way &mdash; except instead of letters, it sends <strong>data packets</strong>, and instead of physical roads, it uses <strong>cables, Wi-Fi signals, and satellite links</strong>.
+            </p>
+
+            <figure>
+                <figcaption>Comparison between postal mail and Internet data transfer.</figcaption>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Postal System</th>
+                            <th scope="col">Internet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Letter</td>
+                            <td>Data packet</td>
+                        </tr>
+                        <tr>
+                            <td>Home address</td>
+                            <td>IP address</td>
+                        </tr>
+                        <tr>
+                            <td>Post office</td>
+                            <td>Router</td>
+                        </tr>
+                        <tr>
+                            <td>Sorting facility</td>
+                            <td>Server / DNS</td>
+                        </tr>
+                        <tr>
+                            <td>Roads and highways</td>
+                            <td>Fiber optic cables, Wi-Fi, satellites</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+
+        <section id="key-components">
+            <h2>Key Components of the Internet</h2>
+
+            <article id="ip-addresses">
+                <h3>IP Addresses</h3>
+                <p>
+                    Every device connected to the Internet is assigned a unique identifier called an <strong>IP (Internet Protocol) address</strong>. It works like a home address for your device. Without it, other computers would not know where to send data.
+                </p>
+                <p>
+                    There are two versions in use today:
+                </p>
+                <ul>
+                    <li><strong>IPv4</strong> &mdash; A 32-bit address written as four numbers separated by dots (e.g., <code>192.168.1.1</code>)</li>
+                    <li><strong>IPv6</strong> &mdash; A 128-bit address created because we ran out of IPv4 addresses (e.g., <code>2001:0db8:85a3::8a2e:0370:7334</code>)</li>
+                </ul>
+            </article>
+
+            <article id="dns">
+                <h3>DNS (Domain Name System)</h3>
+                <p>
+                    Humans prefer names like <code>google.com</code>, but computers communicate using IP addresses. The <strong>DNS</strong> is essentially the Internet's phonebook &mdash; it translates human-readable domain names into IP addresses.
+                </p>
+                <p>
+                    When you type <code>www.google.com</code> into your browser, your computer queries a DNS server, which returns the IP address (e.g., <code>142.250.80.46</code>) so your browser knows where to connect.
+                </p>
+            </article>
+
+            <article id="servers-and-clients">
+                <h3>Servers and Clients</h3>
+                <p>
+                    The Internet operates on a <strong>client-server model</strong>:
+                </p>
+                <ul>
+                    <li><strong>Client</strong> &mdash; Your computer, phone, or tablet. It sends requests (e.g., "Give me this webpage").</li>
+                    <li><strong>Server</strong> &mdash; A powerful computer that stores website files and data. It responds to client requests by sending back the requested information.</li>
+                </ul>
+                <p>
+                    When you open a browser and go to a website, your device is the <em>client</em>, and the computer hosting that website is the <em>server</em>.
+                </p>
+            </article>
+
+            <article id="routers">
+                <h3>Routers</h3>
+                <p>
+                    Routers are devices that direct data packets across the Internet. When you send data, it does not travel in a straight line from your device to the destination. Instead, it hops through multiple routers, each one forwarding the packet closer to its final destination &mdash; much like a letter passing through multiple postal sorting centers.
+                </p>
+            </article>
+
+            <article id="protocols">
+                <h3>Protocols (TCP/IP)</h3>
+                <p>
+                    Protocols are sets of rules that govern how data is transmitted. The two most important Internet protocols are:
+                </p>
+                <ul>
+                    <li><strong>IP (Internet Protocol)</strong> &mdash; Handles addressing and routing so packets reach the right destination.</li>
+                    <li><strong>TCP (Transmission Control Protocol)</strong> &mdash; Breaks data into packets, sends them, and ensures they all arrive correctly and in order. If a packet is lost, TCP requests it to be resent.</li>
+                </ul>
+                <p>
+                    Together, they are known as <strong>TCP/IP</strong>, the foundational communication framework of the Internet.
+                </p>
+            </article>
+        </section>
+
+        <section id="how-a-web-page-loads">
+            <h2>Step-by-Step: How a Web Page Loads</h2>
+            <p>
+                Here is what happens when you type a URL into your browser and press Enter:
+            </p>
+            <ol>
+                <li><strong>DNS Lookup</strong> &mdash; Your browser asks the DNS server to translate the domain name (e.g., <code>www.example.com</code>) into an IP address.</li>
+                <li><strong>TCP Connection</strong> &mdash; Your browser establishes a connection with the server at that IP address using the TCP protocol (this is called a "three-way handshake").</li>
+                <li><strong>HTTP Request</strong> &mdash; Your browser sends an HTTP request asking the server for the webpage's content.</li>
+                <li><strong>Server Response</strong> &mdash; The server processes the request and sends back the HTML, CSS, JavaScript, and image files as a response.</li>
+                <li><strong>Rendering</strong> &mdash; Your browser assembles all the received files and renders the webpage on your screen.</li>
+            </ol>
+        </section>
+
+        <section id="types-of-connections">
+            <h2>How Devices Physically Connect</h2>
+            <p>
+                Data travels across the Internet through physical media:
+            </p>
+            <ul>
+                <li><strong>Fiber optic cables</strong> &mdash; Glass strands that transmit data as pulses of light. They carry the vast majority of Internet traffic across continents and under oceans.</li>
+                <li><strong>Copper cables (DSL)</strong> &mdash; Traditional telephone lines repurposed for Internet data.</li>
+                <li><strong>Coaxial cables</strong> &mdash; Used by cable Internet providers.</li>
+                <li><strong>Wi-Fi / Radio waves</strong> &mdash; Wireless communication between your device and a local router.</li>
+                <li><strong>Satellites</strong> &mdash; Used for Internet access in remote areas where cables cannot reach.</li>
+            </ul>
+        </section>
+        <aside>
+    <h2>Fun Fact</h2>
+    <p>
+        The first message ever sent over the Internet was <strong>"LO"</strong>. On October 29, 1969, researchers at UCLA tried to ...
+    </p>
+     </aside>
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>
+                The Internet is a global network of computers that exchange data using agreed-upon protocols. Devices are identified by IP addresses, domain names are resolved by DNS, data is broken into packets and routed across physical connections, and servers respond to client requests. Every time you load a webpage, dozens of these systems work together behind the scenes to deliver information to your screen in milliseconds.
+            </p>
+        </section>
+
+        <section id="further-reading">
+            <h2>Further Reading</h2>
+            <ul>
+                <li><a href="https://www.howstuffworks.com/internet.htm" rel="noopener noreferrer">HowStuffWorks &mdash; How the Internet Works</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work" rel="noopener noreferrer">MDN Web Docs &mdash; How Does the Internet Work?</a></li>
+                <li><a href="https://www.cloudflare.com/learning/network-layer/what-is-the-internet/" rel="noopener noreferrer">Cloudflare Learning Center &mdash; What Is the Internet?</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Built as part of Day 3 &mdash; CS Concept Explainer Portfolio Project.
+        </p>
+        <p>
+            <small>&copy; 2026 CS Concept Explainer. Created for educational purposes.</small>
+        </p>
+    </footer>
+
+</body>
+</html>
